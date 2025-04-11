@@ -47,8 +47,8 @@ export default function HeroSection() {
                             src="https://www.shadcnblocks.com/images/block/placeholder-1.svg"
                             alt="hero section image"
                             fill
-                            objectFit="cover"
-                            className="rounded-md"
+                            priority
+                            className="rounded-md object-cover"
                         />
                     </figure>
                 </div>

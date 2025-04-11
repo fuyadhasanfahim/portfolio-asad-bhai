@@ -23,6 +23,8 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { contactValidation } from '@/validators/contact.validation.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { toast } from 'sonner';
 
 export default function CallToAction() {
     const form = useForm({
@@ -36,6 +38,31 @@ export default function CallToAction() {
             message: '',
         },
     });
+
+    const onSubmit = async (data: z.infer<typeof contactValidation>) => {
+        try {
+            const response = await fetch(`/api/contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                toast.success(
+                    'Contact form submitted successfully. Wait for response.'
+                );
+
+                const dialogCloseButton = document.getElementById(
+                    'close-dialog'
+                ) as HTMLElement;
+                dialogCloseButton?.click();
+            }
+        } catch (error) {
+            toast.error((error as Error).message);
+        }
+    };
 
     return (
         <section className="padding-x padding-y" id="contact-me">
@@ -56,8 +83,11 @@ export default function CallToAction() {
                         </Link>
 
                         <Dialog>
-                            <DialogTrigger>
-                                <Button>Contact Me</Button>
+                            <DialogTrigger
+                                className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3`}
+                                id="close-dialog"
+                            >
+                                Contact Me
                             </DialogTrigger>
                             <DialogContent>
                                 <DialogHeader>
@@ -65,7 +95,11 @@ export default function CallToAction() {
                                         Fill all the required fields
                                     </DialogTitle>
                                     <Form {...form}>
-                                        <form>
+                                        <form
+                                            onSubmit={form.handleSubmit(
+                                                onSubmit
+                                            )}
+                                        >
                                             <div className="py-4 grid grid-cols-2 gap-4">
                                                 <FormField
                                                     control={form.control}
@@ -190,8 +224,14 @@ export default function CallToAction() {
                                                 <Button
                                                     type="submit"
                                                     className="col-span-2"
+                                                    disabled={
+                                                        form.formState
+                                                            .isSubmitting
+                                                    }
                                                 >
-                                                    Submit
+                                                    {form.formState.isSubmitting
+                                                        ? 'Submitting...'
+                                                        : 'Submit'}
                                                 </Button>
                                             </div>
                                         </form>
