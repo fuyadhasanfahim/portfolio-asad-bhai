@@ -48,44 +48,44 @@ const menu = [
         url: '#services',
         items: [
             {
-                title: 'eCommerce photo editing',
+                title: 'eCommerce photo editing Service',
                 icon: <ShoppingCart className="size-5 shrink-0" />,
-                url: '#e-commerce-photo-editing',
+                url: '#e-commerce-photo-editing-service',
             },
             {
-                title: 'Clipping Path',
+                title: 'Clipping Path Service',
                 icon: <PenTool className="size-5 shrink-0" />,
-                url: '#clipping-path',
+                url: '#clipping-path-service',
             },
             {
-                title: 'Background Editing',
+                title: 'Background Editing Service',
                 icon: <Edit2Icon className="size-5 shrink-0" />,
-                url: '#background-editing',
+                url: '#background-editing-service',
             },
             {
-                title: 'Image Masking',
+                title: 'Image Masking Service',
                 icon: <VenetianMask className="size-5 shrink-0" />,
-                url: '#image-masking',
+                url: '#image-masking-service',
             },
             {
-                title: 'Shadow Creation',
+                title: 'Shadow Creation Service',
                 icon: <BadgePlus className="size-5 shrink-0" />,
-                url: '#shadow-creation',
+                url: '#shadow-creation-service',
             },
             {
-                title: 'Photo Retouching',
+                title: 'Photo Retouching Service',
                 icon: <ImageIcon className="size-5 shrink-0" />,
-                url: '#photo-retouching',
+                url: '#photo-retouching-service',
             },
             {
-                title: 'Ghost Mannequin',
+                title: 'Ghost Mannequin Service',
                 icon: <Ghost className="size-5 shrink-0" />,
-                url: '#ghost-mannequin',
+                url: '#ghost-mannequin-service',
             },
             {
-                title: 'Color Correction',
+                title: 'Color Correction Service',
                 icon: <Palette className="size-5 shrink-0" />,
-                url: '#color-correction',
+                url: '#color-correction-service',
             },
         ],
     },
@@ -103,7 +103,7 @@ const menu = [
     },
     {
         title: 'Contact Me',
-        url: '#about-contact',
+        url: '#contact-me',
     },
 ];
 
