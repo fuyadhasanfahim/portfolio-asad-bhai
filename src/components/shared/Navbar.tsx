@@ -42,7 +42,7 @@ interface MenuItem {
 }
 
 const menu = [
-    { title: 'Home', url: '#' },
+    { title: 'Home', url: '#home' },
     {
         title: 'Services',
         url: '#services',
@@ -113,8 +113,8 @@ export default function Navbar() {
             <div className="container">
                 <nav className="hidden lg:flex items-center justify-between">
                     <Link href={'/'}>
-                        <span className="font-amulya text-xl lg:text-2xl">
-                            MD Ashaduzzaman Asad
+                        <span className="font-amulya text-xl xl:text-2xl">
+                            MD Ashaduzzaman
                         </span>
                     </Link>
 
@@ -136,12 +136,11 @@ export default function Navbar() {
                     </Link>
                 </nav>
 
-                {/* Mobile Menu */}
                 <div className="block lg:hidden">
                     <div className="flex items-center justify-between">
                         <Link href={'/'}>
                             <span className="font-amulya text-xl">
-                                MD Ashaduzzaman Asad
+                                MD Ashaduzzaman
                             </span>
                         </Link>
 
@@ -156,7 +155,7 @@ export default function Navbar() {
                                     <SheetTitle>
                                         <Link href={'/'}>
                                             <span className="font-amulya text-xl">
-                                                MD Ashaduzzaman Asad
+                                                MD Ashaduzzaman
                                             </span>
                                         </Link>
                                     </SheetTitle>

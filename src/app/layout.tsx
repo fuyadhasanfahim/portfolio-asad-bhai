@@ -25,12 +25,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <header>
+            <head>
                 <link
                     href="https://api.fontshare.com/v2/css?f[]=synonym@500&f[]=amulya@700&display=swap"
                     rel="stylesheet"
                 />
-            </header>
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
