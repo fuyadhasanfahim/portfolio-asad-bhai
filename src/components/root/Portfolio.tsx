@@ -80,6 +80,7 @@ export default function Portfolio() {
                 <div>
                     <Button
                         variant="outline"
+                        size={'lg'}
                         onClick={() => setShowAll((prev) => !prev)}
                     >
                         {showAll ? 'See Less' : 'See More'}

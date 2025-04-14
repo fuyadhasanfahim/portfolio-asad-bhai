@@ -7,6 +7,7 @@ import {
     Palette,
     PenTool,
     ShoppingCart,
+    SplinePointer,
     VenetianMask,
 } from 'lucide-react';
 import {
@@ -86,6 +87,11 @@ const menu = [
                 title: 'Color Correction Service',
                 icon: <Palette className="size-5 shrink-0" />,
                 url: '#color-correction-service',
+            },
+            {
+                title: 'Raster To Vector',
+                icon: <SplinePointer className="size-5 shrink-0" />,
+                url: '#raster-to-vector',
             },
         ],
     },

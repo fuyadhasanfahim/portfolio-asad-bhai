@@ -58,6 +58,18 @@ const services = [
         url: 'color-correction-service',
         image: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
     },
+    {
+        id: 'services-8',
+        title: 'Background Editing Service',
+        url: 'background-editing-service',
+        image: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+    },
+    {
+        id: 'services-9',
+        title: 'Raster To Victor',
+        url: 'raster-to-vector',
+        image: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+    },
 ];
 
 export default function Services() {

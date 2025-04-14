@@ -27,12 +27,16 @@ export default function HeroSection() {
                         </p>
                         <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
                             <Link href={'#portfolio'}>
-                                <Button className="w-full sm:w-auto">
+                                <Button
+                                    size={'lg'}
+                                    className="w-full sm:w-auto"
+                                >
                                     Portfolio
                                 </Button>
                             </Link>
                             <Link href={'#contact-me'}>
                                 <Button
+                                    size={'lg'}
                                     variant={'outline'}
                                     className="w-full sm:w-auto"
                                 >
@@ -48,7 +52,7 @@ export default function HeroSection() {
                             alt="hero section image"
                             fill
                             priority
-                            className="rounded-md object-cover"
+                            className="rounded-md object-cover rotate-y-180"
                         />
                     </figure>
                 </div>

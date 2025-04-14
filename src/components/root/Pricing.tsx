@@ -31,6 +31,14 @@ const services = [
         superComplex: 1.6,
     },
     {
+        id: 'services-5',
+        title: 'Photo Retouching Service',
+        simple: 0.8,
+        medium: 1.4,
+        complex: 2.0,
+        superComplex: 2.5,
+    },
+    {
         id: 'services-3',
         title: 'Image Masking Service',
         simple: 0.6,
@@ -45,14 +53,6 @@ const services = [
         medium: 0.7,
         complex: 1.3,
         superComplex: 1.9,
-    },
-    {
-        id: 'services-5',
-        title: 'Photo Retouching Service',
-        simple: 0.8,
-        medium: 1.4,
-        complex: 2.0,
-        superComplex: 2.5,
     },
     {
         id: 'services-6',
@@ -70,6 +70,22 @@ const services = [
         complex: 1.45,
         superComplex: 2.0,
     },
+    {
+        id: 'services-8',
+        title: 'Background Editing Service',
+        simple: 0.45,
+        medium: 0.95,
+        complex: 1.45,
+        superComplex: 2.0,
+    },
+    {
+        id: 'services-9',
+        title: 'Raster To Vector',
+        simple: 0.45,
+        medium: 0.95,
+        complex: 1.45,
+        superComplex: 2.0,
+    },
 ];
 
 export default function Pricing() {
@@ -80,7 +96,7 @@ export default function Pricing() {
         <section className="padding-x padding-y bg-gray-100" id="pricing">
             <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
                 <div className="text-center">
-                    <Badge variant="secondary" className="mb-6">
+                    <Badge variant="outline" className="mb-6">
                         Latest Updates
                     </Badge>
                     <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl font-amulya">
@@ -102,7 +118,7 @@ export default function Pricing() {
                                 <p className="text-sm text-muted-foreground">
                                     Starting from
                                 </p>
-                                <span className="text-4xl font-bold">
+                                <span className="text-4xl font-bold font-amulya">
                                     $0.49
                                 </span>
                                 <p className="text-muted-foreground">
@@ -113,28 +129,32 @@ export default function Pricing() {
                                 <Separator className="mb-6" />
                                 <ul className="space-y-4">
                                     <li className="flex items-center gap-2">
-                                        <CircleCheck className="size-4" />
+                                        <CircleCheck className="size-5 text-primary" />
                                         <span>
-                                            {service.simple.toFixed(2)}/image
+                                            Simple: ${service.simple.toFixed(2)}
+                                            /Images
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CircleCheck className="size-4" />
+                                        <CircleCheck className="size-5 text-primary" />
                                         <span>
-                                            {service.medium.toFixed(2)}/image
+                                            Medium: ${service.medium.toFixed(2)}
+                                            /Images
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CircleCheck className="size-4" />
+                                        <CircleCheck className="size-5 text-primary" />
                                         <span>
-                                            {service.complex.toFixed(2)}/image
+                                            Complex: $
+                                            {service.complex.toFixed(2)}/Images
                                         </span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CircleCheck className="size-4" />
+                                        <CircleCheck className="size-5 text-primary" />
                                         <span>
+                                            Super Complex: $
                                             {service.superComplex.toFixed(2)}
-                                            /image
+                                            /Images
                                         </span>
                                     </li>
                                 </ul>
@@ -152,6 +172,7 @@ export default function Pricing() {
                 <div>
                     <Button
                         variant="outline"
+                        size={'lg'}
                         onClick={() => setShowAll((prev) => !prev)}
                     >
                         {showAll ? 'See Less' : 'See More'}
