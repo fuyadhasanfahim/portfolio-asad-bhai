@@ -79,7 +79,7 @@ export default function CallToAction() {
                     </div>
                     <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
                         <Link href={'#portfolio'}>
-                            <Button variant="outline">Portfolio</Button>
+                            <Button variant="outline" className='w-full'>Portfolio</Button>
                         </Link>
 
                         <Dialog>

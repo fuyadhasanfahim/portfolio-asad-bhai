@@ -109,7 +109,7 @@ const menu = [
 
 export default function Navbar() {
     return (
-        <section className="py-4 padding-x border-b">
+        <section className="py-4 padding-x border-b sticky top-0 z-50 bg-background">
             <div className="container">
                 <nav className="hidden lg:flex items-center justify-between">
                     <Link href={'/'}>
@@ -239,15 +239,19 @@ const renderMobileMenuItem = (item: MenuItem) => {
     }
 
     return (
-        <a key={item.title} href={item.url} className="text-md font-semibold">
+        <Link
+            key={item.title}
+            href={item.url}
+            className="text-md font-semibold"
+        >
             {item.title}
-        </a>
+        </Link>
     );
 };
 
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
     return (
-        <a
+        <Link
             className="flex flex-row gap-4 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
             href={item.url}
         >
@@ -255,6 +259,6 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
             <div>
                 <div className="text-sm font-semibold">{item.title}</div>
             </div>
-        </a>
+        </Link>
     );
 };
