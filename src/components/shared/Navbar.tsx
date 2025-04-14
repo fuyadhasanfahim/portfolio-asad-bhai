@@ -33,6 +33,7 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import Link from 'next/link';
+import GetQuote from './GetQuote';
 
 interface MenuItem {
     title: string;
@@ -132,14 +133,7 @@ export default function Navbar() {
                         </NavigationMenu>
                     </div>
 
-                    <Link href={'/get-quote'}>
-                        <Button
-                            size={'lg'}
-                            className="rounded-full cursor-pointer"
-                        >
-                            Get Quote
-                        </Button>
-                    </Link>
+                    <GetQuote />
                 </nav>
 
                 <div className="block lg:hidden">
@@ -177,11 +171,7 @@ export default function Navbar() {
                                         )}
                                     </Accordion>
 
-                                    <Link href={'/get-quote'}>
-                                        <Button className="rounded-full cursor-pointer w-full">
-                                            Get Quote
-                                        </Button>
-                                    </Link>
+                                    <GetQuote />
                                 </div>
                             </SheetContent>
                         </Sheet>

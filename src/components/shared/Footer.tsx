@@ -1,5 +1,11 @@
+'use client';
+
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { toast } from 'sonner';
+import { useForm } from 'react-hook-form';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 
 const menuItems = [
     {
@@ -70,6 +76,35 @@ const bottomLinks = [
 ];
 
 export default function Footer() {
+    const form = useForm({
+        defaultValues: {
+            email: '',
+        },
+    });
+
+    const onSubmit = async (data: { email: string }) => {
+        try {
+            const response = await fetch(`/api/news-letter`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                toast.success(
+                    'You have successfully subscribed to our newsletter!'
+                );
+                form.reset();
+            } else {
+                toast.error('Failed to subscribe. Please try again later.');
+            }
+        } catch (error) {
+            toast.error((error as Error).message);
+        }
+    };
+
     return (
         <section className="bg-gray-100 padding-x padding-y">
             <div className="container mx-auto">
@@ -159,22 +194,26 @@ export default function Footer() {
                                 Subscribe to receive latest updates and special
                                 offers
                             </p>
-                            <form className="space-y-2">
-                                <div className="flex overflow-hidden rounded-md border">
-                                    <input
-                                        type="email"
-                                        placeholder="Your email address"
-                                        className="w-full border-0 bg-white px-4 py-2 text-sm outline-none"
-                                        required
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90"
-                                    >
-                                        Subscribe
-                                    </button>
-                                </div>
-                                <p className="text-xs text-gray-500">
+                            <form
+                                className="space-y-2"
+                                onSubmit={form.handleSubmit(onSubmit)}
+                            >
+                                <Input
+                                    type="email"
+                                    placeholder="Your email address"
+                                    className="w-full border-0 bg-white px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground outline-none"
+                                    {...form.register('email')}
+                                    required
+                                />
+                                <Button
+                                    type="submit"
+                                    disabled={form.formState.isSubmitting}
+                                >
+                                    {form.formState.isSubmitting
+                                        ? 'Subscribing...'
+                                        : 'Subscribe'}
+                                </Button>
+                                <p className="text-xs text-muted-foreground">
                                     We respect your privacy. Unsubscribe
                                     anytime.
                                 </p>
