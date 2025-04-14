@@ -42,9 +42,9 @@ export default function HeroSection() {
                             </Link>
                         </div>
                     </div>
-                    <figure className="max-h-96 w-full aspect-square relative">
+                    <figure className="w-full aspect-square relative">
                         <Image
-                            src="https://www.shadcnblocks.com/images/block/placeholder-1.svg"
+                            src="https://res.cloudinary.com/dny7zfbg9/image/upload/v1744614859/f7iqbgxhai50imrrdrdl.jpg"
                             alt="hero section image"
                             fill
                             priority

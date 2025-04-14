@@ -1,13 +1,26 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import {
+    ReactCompareSlider,
+    ReactCompareSliderImage,
+} from 'react-compare-slider';
 import Image from 'next/image';
 
-const posts = [
+const services = [
     {
         id: 'services-1',
         title: 'eCommerce Photo Editing Service',
         url: 'e-commerce-photo-editing-service',
-        image: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+        images: {
+            beforeImage: {
+                url: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+                alt: 'eCommerce Photo Editing Service before image',
+            },
+            afterImage: {
+                url: 'https://shadcnblocks.com/images/block/placeholder-dark-1.svg',
+                alt: 'eCommerce Photo Editing Service before image',
+            },
+        },
     },
     {
         id: 'services-2',
@@ -60,22 +73,41 @@ export default function Services() {
                     </h2>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-                    {posts.map((post) => (
-                        <Card key={post.id} id={post.url}>
+                    {services.map(({ title, url, image, images }, index) => (
+                        <Card key={index} id={url}>
                             <CardHeader>
-                                <figure className="relative transition-opacity duration-200 fade-in hover:opacity-70 aspect-video">
-                                    <Image
-                                        src={post.image}
-                                        alt={post.title}
-                                        width={400}
-                                        height={300}
+                                {images ? (
+                                    <ReactCompareSlider
+                                        itemOne={
+                                            <ReactCompareSliderImage
+                                                src={images.beforeImage.url}
+                                                alt={images.beforeImage.alt}
+                                            />
+                                        }
+                                        itemTwo={
+                                            <ReactCompareSliderImage
+                                                src={images.afterImage.url}
+                                                alt={images.afterImage.alt}
+                                            />
+                                        }
+                                        changePositionOnHover
                                         className="rounded-md"
                                     />
-                                </figure>
+                                ) : (
+                                    <figure className="relative transition-opacity duration-200 fade-in hover:opacity-70 aspect-video">
+                                        <Image
+                                            src={image}
+                                            alt={title}
+                                            width={400}
+                                            height={300}
+                                            className="rounded-md"
+                                        />
+                                    </figure>
+                                )}
                             </CardHeader>
                             <CardContent>
                                 <h3 className="text-lg text-center font-semibold md:text-xl">
-                                    {post.title}
+                                    {title}
                                 </h3>
                             </CardContent>
                         </Card>

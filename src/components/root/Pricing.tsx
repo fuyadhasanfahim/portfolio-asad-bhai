@@ -77,7 +77,7 @@ export default function Pricing() {
     const displayedServices = showAll ? services : services.slice(0, 3);
 
     return (
-        <section className="padding-x padding-y" id="pricing">
+        <section className="padding-x padding-y bg-gray-100" id="pricing">
             <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
                 <div className="text-center">
                     <Badge variant="secondary" className="mb-6">

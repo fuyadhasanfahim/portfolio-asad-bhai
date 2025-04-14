@@ -1,6 +1,6 @@
 export default function FAQ() {
     return (
-        <section className="padding-x padding-y">
+        <section className="padding-x padding-y bg-gray-100">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="grid gap-y-12 px-2 lg:[grid-template-columns:1fr_auto]">
                     <div className="text-center lg:text-left">
