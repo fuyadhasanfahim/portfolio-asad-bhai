@@ -1,4 +1,5 @@
 import About from '@/components/root/About';
+import Experience from '@/components/root/Experience';
 import FAQ from '@/components/root/FAQ';
 import HeroSection from '@/components/root/HeroSection';
 import Portfolio from '@/components/root/Portfolio';
@@ -13,9 +14,10 @@ export default function HomePage() {
     return (
         <>
             <HeroSection />
-            <Stats />
+            <Experience />
             <Services />
             <About />
+            <Stats />
             <Portfolio />
             <Pricing />
             <Testimonials />

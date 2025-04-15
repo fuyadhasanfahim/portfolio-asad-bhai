@@ -31,7 +31,7 @@ export default function Stats() {
     return (
         <section className="padding-x padding-y bg-gray-100">
             <div className="container">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 text-center">
                     <h2 className="text-2xl font-bold md:text-4xl font-amulya">
                         Platform performance insights
                     </h2>

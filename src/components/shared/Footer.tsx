@@ -56,7 +56,7 @@ const menuItems = [
             { text: 'About Me', url: '#about-me' },
             { text: 'Portfolio', url: '#portfolio' },
             { text: 'Pricing', url: '#pricing' },
-            { text: 'Contact Me', url: '#about-contact' },
+            { text: 'Contact Me', url: '#contact-me' },
         ],
     },
 ];

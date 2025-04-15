@@ -1,90 +1,48 @@
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@/components/ui/accordion';
+
+const items = [
+    {
+        question: 'What is a FAQ?',
+        answer: 'A FAQ is a list of frequently asked questions and answers on a particular topic.',
+    },
+    {
+        question: 'What is the purpose of a FAQ?',
+        answer: 'The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.',
+    },
+    {
+        question: 'How do I create a FAQ?',
+        answer: 'To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.',
+    },
+    {
+        question: 'What are the benefits of a FAQ?',
+        answer: 'The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.',
+    },
+];
+
 export default function FAQ() {
     return (
         <section className="padding-x padding-y bg-gray-100">
-            <div className="mx-auto max-w-5xl px-6">
-                <div className="grid gap-y-12 px-2 lg:[grid-template-columns:1fr_auto]">
-                    <div className="text-center lg:text-left">
-                        <h2 className="mb-4 text-3xl font-semibold md:text-4xl font-amulya">
-                            Frequently <br className="hidden lg:block" /> Asked{' '}
-                            <br className="hidden lg:block" />
-                            Questions
-                        </h2>
-                        <p>Accusantium quisquam. Illo, omnis?</p>
-                    </div>
-
-                    <div className="divide-y divide-dashed sm:mx-auto sm:max-w-lg lg:mx-0">
-                        <div className="pb-6">
-                            <h3 className="font-medium font-amulya md:text-lg lg:text-xl">
-                                What is the refund policy?
-                            </h3>
-                            <p className="text-muted-foreground mt-4">
-                                We offer a 30-day money back guarantee. If you
-                                are not satisfied with our product, you can
-                                request a refund within 30 days of your
-                                purchase.
-                            </p>
-
-                            <ol className="list-outside list-decimal space-y-2 pl-4">
-                                <li className="text-muted-foreground mt-4">
-                                    To request a refund, please contact our
-                                    support team with your order number and
-                                    reason for the refund.
-                                </li>
-                                <li className="text-muted-foreground mt-4">
-                                    Refunds will be processed within 3-5
-                                    business days.
-                                </li>
-                                <li className="text-muted-foreground mt-4">
-                                    Please note that refunds are only available
-                                    for new customers and are limited to one per
-                                    customer.
-                                </li>
-                            </ol>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium font-amulya md:text-lg lg:text-xl">
-                                How do I cancel my subscription?
-                            </h3>
-                            <p className="text-muted-foreground mt-4">
-                                You can cancel your subscription at any time by
-                                logging into your account and clicking on the
-                                cancel button.
-                            </p>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium font-amulya md:text-lg lg:text-xl">
-                                Can I upgrade my plan?
-                            </h3>
-                            <p className="text-muted-foreground my-4">
-                                Yes, you can upgrade your plan at any time by
-                                logging into your account and selecting the plan
-                                you want to upgrade to.
-                            </p>
-                            <ul className="list-outside list-disc space-y-2 pl-4">
-                                <li className="text-muted-foreground">
-                                    You will be charged the difference in price
-                                    between your current plan and the plan you
-                                    are upgrading to.
-                                </li>
-                                <li className="text-muted-foreground">
-                                    Your new plan will take effect immediately
-                                    and you will be billed at the new rate on
-                                    your next billing cycle.
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium font-amulya md:text-lg lg:text-xl">
-                                Do you offer phone support?
-                            </h3>
-                            <p className="text-muted-foreground mt-4">
-                                We do not offer phone support at this time.
-                                However, you can contact us via email or live
-                                chat for any questions or concerns you may have.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div className="container !max-w-3xl">
+                <h2 className="mb-4 text-3xl font-semibold text-pretty md:mb-6 md:text-4xl lg:mb-8 lg:max-w-3xl lg:text-5xl font-amuly mx-auto text-center">
+                    Frequently asked questions
+                </h2>
+                <Accordion type="single" collapsible>
+                    {items.map((item, index) => (
+                        <AccordionItem key={index} value={`item-${index}`}>
+                            <AccordionTrigger className="font-semibold hover:no-underline font-amulya md:text-lg lg:text-xl">
+                                {item.question}
+                            </AccordionTrigger>
+                            <AccordionContent className="text-muted-foreground">
+                                {item.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
             </div>
         </section>
     );

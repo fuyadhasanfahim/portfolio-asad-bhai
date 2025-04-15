@@ -11,12 +11,13 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Separator } from '../ui/separator';
-import { ArrowRight, CircleCheck } from 'lucide-react';
+import { CircleCheck } from 'lucide-react';
+import Contact from '../shared/Contact';
 
 const services = [
     {
         id: 'services-1',
-        title: 'eCommerce Photo Editing Service',
+        title: 'eCommerce Photo Editing',
         simple: 0.5,
         medium: 1.0,
         complex: 1.5,
@@ -160,10 +161,7 @@ export default function Pricing() {
                                 </ul>
                             </CardContent>
                             <CardFooter className="mt-auto">
-                                <Button className="w-full">
-                                    Contact
-                                    <ArrowRight className="ml-2 size-4" />
-                                </Button>
+                                <Contact className="w-full" icon={false} />
                             </CardFooter>
                         </Card>
                     ))}
@@ -173,6 +171,7 @@ export default function Pricing() {
                     <Button
                         variant="outline"
                         size={'lg'}
+                        className="cursor-pointer"
                         onClick={() => setShowAll((prev) => !prev)}
                     >
                         {showAll ? 'See Less' : 'See More'}

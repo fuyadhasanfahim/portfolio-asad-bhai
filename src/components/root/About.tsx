@@ -1,12 +1,12 @@
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 export default function AboutMe() {
     return (
-        <section id="about-me" className="padding-x padding-y bg-gray-100">
+        <section id="about-me" className="padding-x padding-y">
             <div className="container mx-auto flex flex-col items-center gap-16 lg:flex-row lg:gap-12 justify-evenly">
-                <figure className="max-w-md shrink-0 overflow-hidden relative shadow-md rounded-2xl">
+                <figure className="max-w-md shrink-0 overflow-hidden relative shadow-md rounded-md">
                     <Image
                         src="https://res.cloudinary.com/dny7zfbg9/image/upload/v1744614881/ov1x3zjlnkuyyo9voceb.jpg"
                         alt="Photo Editor"
@@ -51,7 +51,7 @@ export default function AboutMe() {
                             lightning-fast turnaround, and obsessive attention
                             to detail.
                         </p>
-                        {/* <div>
+                        <div>
                             <h4>
                                 Ready to transform your images? Connect with me:
                             </h4>
@@ -109,7 +109,7 @@ export default function AboutMe() {
                                 Let me bring your visual vision to life – where
                                 every pixel matters and excellence is standard.
                             </em>
-                        </p> */}
+                        </p>
                     </div>
                 </div>
             </div>

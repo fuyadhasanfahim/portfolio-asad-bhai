@@ -74,7 +74,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="padding-x padding-y" id="services">
+        <section className="padding-x padding-y bg-gray-100" id="services">
             <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
                 <div className="text-center">
                     <Badge variant="secondary" className="mb-6">

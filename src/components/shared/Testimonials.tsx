@@ -57,7 +57,7 @@ const ReviewCard = ({
     return (
         <figure
             className={cn(
-                'relative w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition'
+                'relative w-full max-w-md rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition'
             )}
         >
             <div className="flex items-center gap-3 mb-3">
@@ -106,7 +106,7 @@ const ReviewCard = ({
 
 export default function Testimonials() {
     return (
-        <section className="padding-x padding-y">
+        <section className="padding-x padding-y ">
             <div className="text-center mb-3 md:mb-4 lg:mb-6">
                 <Badge variant="outline" className="mb-6">
                     Latest Updates
