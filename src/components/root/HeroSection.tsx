@@ -16,7 +16,7 @@ export default function HeroSection() {
                             <ArrowUpRight className="ml-2 size-4" />
                         </Badge>
                         <div className="my-6 text-3xl font-bold text-pretty lg:text-6xl font-amulya">
-                            <h2 className="leading-18">
+                            <h2 className="lg:leading-18">
                                 I’m Md Ashaduzzaman, Expertise in Photo Editing
                             </h2>
                         </div>
