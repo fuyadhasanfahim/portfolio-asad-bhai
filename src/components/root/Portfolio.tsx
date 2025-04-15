@@ -81,6 +81,7 @@ export default function Portfolio() {
                     <Button
                         variant="outline"
                         size={'lg'}
+                        className="cursor-pointer"
                         onClick={() => setShowAll((prev) => !prev)}
                     >
                         {showAll ? 'See Less' : 'See More'}

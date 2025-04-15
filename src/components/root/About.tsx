@@ -1,6 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function AboutMe() {
     return (
@@ -50,65 +49,6 @@ export default function AboutMe() {
                             with <strong>pixel-perfect precision</strong>,
                             lightning-fast turnaround, and obsessive attention
                             to detail.
-                        </p>
-                        <div>
-                            <h4>
-                                Ready to transform your images? Connect with me:
-                            </h4>
-                            <div className="flex flex-wrap gap-3 mt-2">
-                                <Link
-                                    href="https://www.fiverr.com/cutoutexpertbd"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition-colors"
-                                >
-                                    <span className="font-medium">Fiverr</span>
-                                </Link>
-                                <Link
-                                    href="https://www.upwork.com/freelancers/asad4nur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors"
-                                >
-                                    <span className="font-medium">Upwork</span>
-                                </Link>
-                                <Link
-                                    href="https://www.linkedin.com/in/asad4nur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors"
-                                >
-                                    <span className="font-medium">
-                                        LinkedIn
-                                    </span>
-                                </Link>
-                                <Link
-                                    href="https://webbriks.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors"
-                                >
-                                    <span className="font-medium">
-                                        Web Briks LLC
-                                    </span>
-                                </Link>
-                                <Link
-                                    href="https://clippingpathaction.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center px-3 py-1 rounded-full bg-orange-100 text-orange-800 hover:bg-orange-200 transition-colors"
-                                >
-                                    <span className="font-medium">
-                                        Clipping Path Action
-                                    </span>
-                                </Link>
-                            </div>
-                        </div>
-                        <p>
-                            <em>
-                                Let me bring your visual vision to life – where
-                                every pixel matters and excellence is standard.
-                            </em>
                         </p>
                     </div>
                 </div>

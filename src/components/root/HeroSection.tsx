@@ -36,7 +36,7 @@ export default function HeroSection() {
                                     Portfolio
                                 </Button>
                             </Link>
-                            <Contact />
+                            <Contact icon />
                         </div>
                     </div>
                     <figure className="w-full aspect-square relative lg:col-span-2">

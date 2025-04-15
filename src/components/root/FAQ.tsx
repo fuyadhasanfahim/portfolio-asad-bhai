@@ -34,7 +34,7 @@ export default function FAQ() {
                 <Accordion type="single" collapsible>
                     {items.map((item, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
-                            <AccordionTrigger className="font-semibold hover:no-underline font-amulya md:text-lg lg:text-xl">
+                            <AccordionTrigger className="font-semibold hover:no-underline font-amulya md:text-lg lg:text-xl cursor-pointer">
                                 {item.question}
                             </AccordionTrigger>
                             <AccordionContent className="text-muted-foreground">

@@ -21,13 +21,13 @@ export default function CallToAction() {
                             <Button
                                 variant="outline"
                                 size={'lg'}
-                                className="w-full"
+                                className="w-full cursor-pointer"
                             >
                                 Portfolio
                             </Button>
                         </Link>
 
-                        <Contact />
+                        <Contact icon />
                     </div>
                 </div>
             </div>
