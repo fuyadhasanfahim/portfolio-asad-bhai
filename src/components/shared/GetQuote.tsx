@@ -174,7 +174,7 @@ export default function GetQuote() {
                 Get a Quote
             </DialogTrigger>
 
-            <DialogContent className="sm:max-w-md md:max-w-lg lg:max-w-2xl rounded-2xl">
+            <DialogContent className="max-w-md md:max-w-lg lg:max-w-2xl rounded-2xl">
                 <ScrollArea className="h-[80vh] pr-6">
                     <DialogHeader>
                         <DialogTitle className="text-xl font-amulya mb-4">
@@ -182,8 +182,8 @@ export default function GetQuote() {
                         </DialogTitle>
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)}>
-                                <div className="py-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="md:col-span-2 p-4 bg-gray-50 rounded-lg">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-1">
+                                    <div className="md:col-span-2 p-4 bg-gray-100 rounded-lg">
                                         <h3 className="font-medium mb-2">
                                             Upload Images (Max 5)
                                         </h3>
@@ -215,7 +215,7 @@ export default function GetQuote() {
                                                 </span>
                                             </p>
                                             <p className="mt-1 text-xs text-gray-400">
-                                                Supported formats: JPG, PNG, GIF
+                                                Supported formats: JPG, PNG, PSD
                                                 (Max 5 images)
                                             </p>
                                             <input
@@ -274,7 +274,7 @@ export default function GetQuote() {
                                                 name="driveLink"
                                                 render={({ field }) => (
                                                     <FormItem>
-                                                        <FormLabel className="text-sm">
+                                                        <FormLabel className="text-base">
                                                             Or provide a Google
                                                             Drive link
                                                             (optional)
@@ -298,7 +298,9 @@ export default function GetQuote() {
                                         name="name"
                                         render={({ field }) => (
                                             <FormItem className="col-span-2">
-                                                <FormLabel>Name *</FormLabel>
+                                                <FormLabel className="text-base">
+                                                    Name *
+                                                </FormLabel>
                                                 <FormControl>
                                                     <Input
                                                         placeholder="Enter your full name"
@@ -317,7 +319,7 @@ export default function GetQuote() {
                                             name="email"
                                             render={({ field }) => (
                                                 <FormItem>
-                                                    <FormLabel>
+                                                    <FormLabel className="text-base">
                                                         Email *
                                                     </FormLabel>
                                                     <FormControl>
@@ -337,7 +339,7 @@ export default function GetQuote() {
                                             name="company"
                                             render={({ field }) => (
                                                 <FormItem>
-                                                    <FormLabel>
+                                                    <FormLabel className="text-base">
                                                         Company
                                                     </FormLabel>
                                                     <FormControl>
@@ -357,7 +359,7 @@ export default function GetQuote() {
                                             name="country"
                                             render={({ field }) => (
                                                 <FormItem>
-                                                    <FormLabel>
+                                                    <FormLabel className="text-base">
                                                         Country *
                                                     </FormLabel>
                                                     <FormControl>
@@ -377,7 +379,7 @@ export default function GetQuote() {
                                             name="phoneNumber"
                                             render={({ field }) => (
                                                 <FormItem>
-                                                    <FormLabel>
+                                                    <FormLabel className="text-base">
                                                         Phone *
                                                     </FormLabel>
                                                     <FormControl>
@@ -464,7 +466,9 @@ export default function GetQuote() {
                                         name="message"
                                         render={({ field }) => (
                                             <FormItem className="col-span-2">
-                                                <FormLabel>Message *</FormLabel>
+                                                <FormLabel className="text-base">
+                                                    Message *
+                                                </FormLabel>
                                                 <FormControl>
                                                     <Textarea
                                                         placeholder="Describe your project requirements in detail..."

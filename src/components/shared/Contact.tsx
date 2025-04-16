@@ -82,7 +82,7 @@ export default function Contact({
                 Contact Me
                 {icon && <ArrowUpRight className="size-4" />}
             </DialogTrigger>
-            <DialogContent className="pr-6">
+            <DialogContent className="pr-6 max-w-md">
                 <DialogHeader>
                     <DialogTitle className="lg:text-xl font-amulya">
                         Fill all the required fields

@@ -7,20 +7,28 @@ import {
 
 const items = [
     {
-        question: 'What is a FAQ?',
-        answer: 'A FAQ is a list of frequently asked questions and answers on a particular topic.',
+        question: 'What camera should I start with as a beginner?',
+        answer: 'A good beginner camera is one that fits your budget and needs. DSLRs like the Canon EOS Rebel series or mirrorless cameras like the Sony Alpha series are popular choices for starters.',
     },
     {
-        question: 'What is the purpose of a FAQ?',
-        answer: 'The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.',
+        question: 'What’s the difference between RAW and JPEG?',
+        answer: 'RAW files contain uncompressed data from your camera’s sensor, allowing for greater editing flexibility. JPEGs are compressed and ready-to-use but offer less control in post-processing.',
     },
     {
-        question: 'How do I create a FAQ?',
-        answer: 'To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.',
+        question: 'How do I get sharp photos?',
+        answer: 'Use a fast enough shutter speed, proper focus, and avoid camera shake by using a tripod or image stabilization. Good lighting and quality lenses also help improve sharpness.',
     },
     {
-        question: 'What are the benefits of a FAQ?',
-        answer: 'The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.',
+        question: 'What is the exposure triangle?',
+        answer: 'The exposure triangle refers to the relationship between ISO, aperture, and shutter speed. Balancing these three settings controls how light or dark your photo is.',
+    },
+    {
+        question: 'Do I need expensive gear to take good photos?',
+        answer: 'Not at all. While high-end gear helps, understanding light, composition, and camera settings is far more important. Many stunning photos are taken with smartphones or entry-level gear.',
+    },
+    {
+        question: 'How can I improve my photo composition?',
+        answer: 'Follow techniques like the rule of thirds, leading lines, framing, and symmetry. Studying other photographers and practicing regularly also improves composition skills.',
     },
 ];
 

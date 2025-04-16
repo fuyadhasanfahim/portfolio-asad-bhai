@@ -1,8 +1,5 @@
 import nodemailer from 'nodemailer';
 import { NextResponse, NextRequest } from 'next/server';
-import { join } from 'path';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
 
 export async function POST(req: NextRequest) {
     try {
@@ -36,31 +33,14 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        const uploadedFiles: string[] = [];
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const attachments: any[] = [];
-
-        const uploadsDir = join(process.cwd(), 'public', 'uploads');
-        if (!existsSync(uploadsDir)) {
-            await mkdir(uploadsDir, { recursive: true });
-        }
+        // Process attachments directly from formData
+        const attachments: { filename: string; content: Buffer }[] = [];
 
         for (let i = 0; i < 5; i++) {
             const file = formData.get(`image-${i}`) as File;
 
             if (file && file.size > 0) {
-                const fileExt = file.name.split('.').pop();
-                const fileName = `${Date.now()}-${Math.random()
-                    .toString(36)
-                    .substring(2, 15)}.${fileExt}`;
-                const filePath = join(uploadsDir, fileName);
-
                 const fileBuffer = Buffer.from(await file.arrayBuffer());
-
-                await writeFile(filePath, fileBuffer);
-
-                uploadedFiles.push(`/uploads/${fileName}`);
-
                 attachments.push({
                     filename: file.name,
                     content: fileBuffer,
@@ -94,12 +74,6 @@ export async function POST(req: NextRequest) {
             
             Message:
             ${message}
-            
-            ${
-                uploadedFiles.length > 0
-                    ? `\nAttached ${uploadedFiles.length} image(s)`
-                    : ''
-            }
         `;
 
         const htmlContent = `
@@ -125,12 +99,6 @@ export async function POST(req: NextRequest) {
             
             <h3>Message:</h3>
             <p>${message.replace(/\n/g, '<br>')}</p>
-            
-            ${
-                uploadedFiles.length > 0
-                    ? `<p>Attached ${uploadedFiles.length} image(s)</p>`
-                    : ''
-            }
         `;
 
         const mailOptions = {
@@ -148,7 +116,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({
             success: true,
             message: 'Quote request sent successfully',
-            uploadedFiles,
         });
     } catch (error) {
         if (error instanceof Error) {

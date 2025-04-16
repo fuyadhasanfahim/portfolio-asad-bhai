@@ -62,12 +62,12 @@ const menuItems = [
 ];
 
 const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/' },
+    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/Asad4nur' },
+    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/asad4nur' },
     { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/' },
-    { name: 'Fiverr', url: 'https://fiverr.com/' },
-    { name: 'Upwork', url: 'https://upwork.com/' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/asad4nur' },
+    { name: 'Fiverr', url: 'https://www.fiverr.com/cutoutexpertbd' },
+    { name: 'Upwork', url: 'https://www.upwork.com/freelancers/asad4nur' },
 ];
 
 const bottomLinks = [
