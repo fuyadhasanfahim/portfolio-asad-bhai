@@ -63,7 +63,7 @@ const menuItems = [
 
 const socialLinks = [
     { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/Asad4nur' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/asad4nur' },
+    { name: 'Twitter', icon: Twitter, url: 'https://x.com/asad4boss' },
     {
         name: 'Instagram',
         icon: Instagram,

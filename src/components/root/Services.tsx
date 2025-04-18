@@ -132,12 +132,12 @@ const services = [
         url: 'raster-to-vector',
         images: {
             beforeImage: {
-                url: 'https://res.cloudinary.com/dny7zfbg9/image/upload/v1744780065/eogzgzgn7o4yjzzz7c1l.jpg',
-                alt: 'Background Editing Service before image',
+                url: 'https://res.cloudinary.com/dny7zfbg9/image/upload/v1744980808/n890wfos83eh1l4tgagv.jpg',
+                alt: 'Raster To Victor before image',
             },
             afterImage: {
-                url: 'https://res.cloudinary.com/dny7zfbg9/image/upload/v1744780065/yh7kin2mfshqhyfga7vv.jpg',
-                alt: 'Background Editing Service before image',
+                url: 'https://res.cloudinary.com/dny7zfbg9/image/upload/v1744980808/d15amfvtnyjdnhtvp0oa.jpg',
+                alt: 'Raster To Victor before image',
             },
         },
     },
